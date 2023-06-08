@@ -25,7 +25,7 @@ export const AddMovie = () => {
 
   const handleAddMovie = async (movieData) => {
     try {
-      await axios.post("http://localhost:3001/movies", movieData);
+      await axios.post("https://loreology.herokuapp.com/movies", movieData);
       alert("Movie created successfully");
       navigate("/");
     } catch (error) {

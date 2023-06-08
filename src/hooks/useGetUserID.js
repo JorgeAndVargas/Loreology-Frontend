@@ -7,7 +7,7 @@ export const useGetUserID = () => {
   useEffect(() => {
     const fetchUserID = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/getUserID");
+        const response = await axios.get("https://loreology.herokuapp.com/getUserID");
         setUserID(response.data.userID);
       } catch (error) {
         console.error(error);

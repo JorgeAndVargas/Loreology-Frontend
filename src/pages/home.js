@@ -12,7 +12,7 @@ export const Home = () => {
 
   const fetchMovies = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/movies");
+      const response = await axios.get("https://loreology.herokuapp.com/movies");
       setMovies(response.data.movies);
     } catch (error) {
       console.error(error);
@@ -25,7 +25,7 @@ export const Home = () => {
 
   const handleUpdateMovie = async (updatedMovie) => {
     try {
-      await axios.put(`http://localhost:3001/movies/${updatedMovie._id}`, updatedMovie);
+      await axios.put(`https://loreology.herokuapp.com/movies/${updatedMovie._id}`, updatedMovie);
       setEditingMovie(null);
       fetchMovies();
     } catch (error) {
@@ -39,7 +39,7 @@ export const Home = () => {
 
   const handleDeleteMovie = async (movieId) => {
     try {
-      await axios.delete(`http://localhost:3001/movies/${movieId}`);
+      await axios.delete(`https://loreology.herokuapp.com/movies/${movieId}`);
       fetchMovies();
     } catch (error) {
       console.error(error);
