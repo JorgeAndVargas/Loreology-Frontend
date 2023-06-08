@@ -34,13 +34,13 @@ export const AddMovie = () => {
     }
   };
 
-  const handleMovieChange = (event) => {
-    const { name, value } = event.target;
-    setNewMovie((prevMovie) => ({
-      ...prevMovie,
-      [name]: value,
-    }));
-  };
+  // const handleMovieChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setNewMovie((prevMovie) => ({
+  //     ...prevMovie,
+  //     [name]: value,
+  //   }));
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
